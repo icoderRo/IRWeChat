@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LCDetailViewController">
+            <connections>
+                <outlet property="tableView" destination="6AN-Ji-xUe" id="a8F-kM-fQk"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="7I8-FY-DBD">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                </imageView>
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1f07" translatesAutoresizingMaskIntoConstraints="NO" id="bfB-4u-VpL">
+                    <rect key="frame" x="100" y="50" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="9pW-PW-7vq"/>
+                        <constraint firstAttribute="width" constant="50" id="swn-6c-sI4"/>
+                    </constraints>
+                </imageView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6AN-Ji-xUe">
+                    <rect key="frame" x="0.0" y="150" width="600" height="350"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="FgA-7U-dSl"/>
+                        <outlet property="delegate" destination="-1" id="NTn-Ge-vsO"/>
+                    </connections>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r8A-wT-wap">
+                    <rect key="frame" x="145" y="520" width="65" height="37"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="夜间" image="我的名片夹">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GFX-sZ-ap6">
+                    <rect key="frame" x="250" y="520" width="65" height="37"/>
+                    <state key="normal" title="深圳">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ik3-Vv-k8S">
+                    <rect key="frame" x="40" y="520" width="65" height="37"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="设置" image="set1">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="bfB-4u-VpL" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="50" id="14e-c2-xnc"/>
+                <constraint firstItem="r8A-wT-wap" firstAttribute="height" secondItem="GFX-sZ-ap6" secondAttribute="height" id="1kS-m9-UF0"/>
+                <constraint firstItem="r8A-wT-wap" firstAttribute="top" secondItem="Ik3-Vv-k8S" secondAttribute="top" id="3zY-nt-9Xe"/>
+                <constraint firstItem="GFX-sZ-ap6" firstAttribute="top" secondItem="r8A-wT-wap" secondAttribute="top" id="6Zu-GQ-pn2"/>
+                <constraint firstAttribute="trailing" secondItem="6AN-Ji-xUe" secondAttribute="trailing" id="9SD-n2-f3b"/>
+                <constraint firstItem="6AN-Ji-xUe" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="9T4-QQ-gAY"/>
+                <constraint firstItem="6AN-Ji-xUe" firstAttribute="top" secondItem="bfB-4u-VpL" secondAttribute="bottom" constant="50" id="FRJ-cU-aOI"/>
+                <constraint firstAttribute="bottom" secondItem="6AN-Ji-xUe" secondAttribute="bottom" constant="100" id="IIj-OV-Ql5"/>
+                <constraint firstItem="GFX-sZ-ap6" firstAttribute="width" secondItem="r8A-wT-wap" secondAttribute="width" id="Pf1-2p-OiJ"/>
+                <constraint firstItem="7I8-FY-DBD" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Rai-97-vXH"/>
+                <constraint firstItem="GFX-sZ-ap6" firstAttribute="leading" secondItem="r8A-wT-wap" secondAttribute="trailing" constant="40" id="T6j-SR-5os"/>
+                <constraint firstItem="Ik3-Vv-k8S" firstAttribute="height" secondItem="r8A-wT-wap" secondAttribute="height" id="WfM-Fx-6gn"/>
+                <constraint firstItem="7I8-FY-DBD" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="XEl-Rq-ii4"/>
+                <constraint firstAttribute="bottom" secondItem="7I8-FY-DBD" secondAttribute="bottom" id="bbc-ti-Z21"/>
+                <constraint firstItem="r8A-wT-wap" firstAttribute="leading" secondItem="Ik3-Vv-k8S" secondAttribute="trailing" constant="40" id="fwT-cN-Qix"/>
+                <constraint firstAttribute="trailing" secondItem="7I8-FY-DBD" secondAttribute="trailing" id="gBC-jE-Czp"/>
+                <constraint firstItem="Ik3-Vv-k8S" firstAttribute="top" secondItem="6AN-Ji-xUe" secondAttribute="bottom" constant="20" id="lyf-Mb-EUg"/>
+                <constraint firstItem="r8A-wT-wap" firstAttribute="width" secondItem="Ik3-Vv-k8S" secondAttribute="width" id="ozV-PQ-K4d"/>
+                <constraint firstItem="bfB-4u-VpL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="100" id="sUg-9P-VJl"/>
+                <constraint firstItem="Ik3-Vv-k8S" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="sq5-Nk-UgL"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="1f07" width="64" height="64"/>
+        <image name="back" width="540" height="960"/>
+        <image name="set1" width="37" height="37"/>
+        <image name="我的名片夹" width="20" height="20"/>
+    </resources>
+</document>

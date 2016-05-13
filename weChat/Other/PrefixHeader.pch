@@ -1,0 +1,62 @@
+//
+//  PrefixHeader.pch
+//  weChat
+//
+//  Created by Lc on 16/3/29.
+//  Copyright © 2016年 LC. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import "Masonry.h"
+#import "UIImageView+WebCache.h"
+#import "NSString+LCCatory.h"
+#import "UIView+LCCategory.h"
+#import "UIImage+LCCategory.h"
+#import "LCAudioManager.h"
+#import "LCAudioPlay.h"
+#import "LCAudioRecord.h"
+#import "LCAudioPlayTool.h"
+#import "MJExtension.h"
+#import "NSData+LCCategory.h"
+#import "MBProgressHUD+MJ.h"
+#import "FMDB.h"
+#import "AFNetworking.h"
+
+#define color646grey [UIColor colorWithWhite:0.392 alpha:1.000]
+#define color227shallblue [UIColor colorWithRed:0.133 green:0.478 blue:0.898 alpha:1.000]
+#define color004deepblue [UIColor colorWithRed:0.000 green:0.310 blue:0.686 alpha:1.000]
+#define colorc8cwhiteGrey [UIColor colorWithWhite:0.784 alpha:1.000]
+#define colore0eGrey [UIColor colorWithWhite:0.878 alpha:1.000]
+#define colorf0fGrey  LCColor(239, 239, 244)
+#define color969Grey [UIColor colorWithWhite:0.588 alpha:1.000]
+#define LCColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+#define LCColorRGBA(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:a]
+#define iPhone6s ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? (CGSizeEqualToSize(CGSizeMake(750, 1334), [[UIScreen mainScreen] currentMode].size) || CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size)) : NO)
+
+#define iPhone6SP ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? (CGSizeEqualToSize(CGSizeMake(1125, 2001), [[UIScreen mainScreen] currentMode].size) || CGSizeEqualToSize(CGSizeMake(1242, 2208), [[UIScreen mainScreen] currentMode].size)) : NO)
+
+#define iPhone4S ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 960), [[UIScreen mainScreen] currentMode].size) : NO)
+#define iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#ifdef DEBUG
+#define LCLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#else
+#define LCLog(...)
+#endif
+
+#define iPhone5preferredMaxWidth 195
+#define iPhone6spreferredMaxWidth 235
+#define iPhone6sPluspreferredMaxWidth 255
+
+#define screenW  [UIScreen mainScreen].bounds.size.width
+#define screenH  [UIScreen mainScreen].bounds.size.height
+
+#define LCWeakSelf __weak typeof(self) weakSelf = self;
+
+#define offsetMainRight 320
+#define offsetDetailRight 90
+#endif /* PrefixHeader_pch */

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="settingCell" rowHeight="87" id="KGk-i7-Jjw" customClass="LCSettingCell">
+            <rect key="frame" x="0.0" y="0.0" width="349" height="87"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="349" height="86.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aio_voiceChange_effect_5" translatesAutoresizingMaskIntoConstraints="NO" id="2KH-sH-pGE">
+                        <rect key="frame" x="12" y="12" width="62" height="62"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="62" id="BEV-nN-dFT"/>
+                            <constraint firstAttribute="width" constant="62" id="NrK-4g-4xz"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KSF-6U-UAK">
+                        <rect key="frame" x="86" y="22" width="36" height="44"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="44" id="i7R-gd-0Ud"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.39215686274509803" green="0.39215686274509803" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstItem="2KH-sH-pGE" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Hka-h2-LvA"/>
+                    <constraint firstItem="KSF-6U-UAK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" priority="250" constant="12" id="kez-Jy-4Qc"/>
+                    <constraint firstItem="KSF-6U-UAK" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="sx6-vR-NyT"/>
+                    <constraint firstItem="KSF-6U-UAK" firstAttribute="leading" secondItem="2KH-sH-pGE" secondAttribute="trailing" priority="500" constant="12" id="z2N-8X-FL9"/>
+                    <constraint firstItem="2KH-sH-pGE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="zTj-ne-8HX"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="constraint" destination="kez-Jy-4Qc" id="VS1-Tw-ZlO"/>
+                <outlet property="headerImageView" destination="2KH-sH-pGE" id="2d1-kD-TVU"/>
+                <outlet property="titleLabel" destination="KSF-6U-UAK" id="CXJ-W8-Xde"/>
+            </connections>
+            <point key="canvasLocation" x="270.5" y="353.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="aio_voiceChange_effect_5" width="60" height="60"/>
+    </resources>
+</document>

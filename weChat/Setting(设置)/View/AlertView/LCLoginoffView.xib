@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="RlS-J6-mg7" customClass="LCLoginoffView">
+            <rect key="frame" x="0.0" y="0.0" width="279" height="357"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view alpha="0.40000000596046448" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rW5-A1-XPg">
+                    <rect key="frame" x="0.0" y="0.0" width="279" height="153"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <gestureRecognizers/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nBh-ZO-8td">
+                    <rect key="frame" x="0.0" y="153" width="279" height="204"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vc6-sW-XFB">
+                            <rect key="frame" x="15" y="66" width="249" height="44"/>
+                            <color key="backgroundColor" red="0.1333333333" green="0.47843137250000001" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="mEk-tq-rfd"/>
+                            </constraints>
+                            <state key="normal" title="确认">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <state key="highlighted" backgroundImage="sureSelectedImage">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                    <real key="value" value="0.10000000000000001"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="sureButton:" destination="RlS-J6-mg7" eventType="touchUpInside" id="0md-E4-cXp"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="3" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xlb-lg-Flo">
+                            <rect key="frame" x="15" y="2" width="249" height="44"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="miF-0g-vWq"/>
+                            </constraints>
+                            <state key="normal" title="您确认需要注销登录?">
+                                <color key="titleColor" red="0.1333333333" green="0.47843137250000001" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <state key="highlighted" backgroundImage="btnDefaultClick">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zrz-zo-Ctk">
+                            <rect key="frame" x="15" y="130" width="249" height="44"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="sa8-13-bJB"/>
+                            </constraints>
+                            <state key="normal" title="取消">
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <state key="highlighted" backgroundImage="btnDefaultClick">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                    <real key="value" value="0.10000000000000001"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="cancelButton:" destination="RlS-J6-mg7" eventType="touchUpInside" id="ewS-G4-wtR"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="Vc6-sW-XFB" firstAttribute="leading" secondItem="nBh-ZO-8td" secondAttribute="leading" constant="15" id="0Ko-gT-X1L"/>
+                        <constraint firstItem="Vc6-sW-XFB" firstAttribute="centerX" secondItem="nBh-ZO-8td" secondAttribute="centerX" id="1b0-Fa-uM8"/>
+                        <constraint firstItem="zrz-zo-Ctk" firstAttribute="trailing" secondItem="Vc6-sW-XFB" secondAttribute="trailing" id="2na-Ae-64c"/>
+                        <constraint firstItem="Xlb-lg-Flo" firstAttribute="leading" secondItem="Vc6-sW-XFB" secondAttribute="leading" id="5bA-9b-UI9"/>
+                        <constraint firstAttribute="trailing" secondItem="Vc6-sW-XFB" secondAttribute="trailing" constant="15" id="7hj-DL-qZS"/>
+                        <constraint firstItem="Vc6-sW-XFB" firstAttribute="top" secondItem="Xlb-lg-Flo" secondAttribute="bottom" constant="20" id="JYt-qK-9L7"/>
+                        <constraint firstAttribute="bottom" secondItem="zrz-zo-Ctk" secondAttribute="bottom" constant="30" id="WPk-Se-6r9"/>
+                        <constraint firstItem="Xlb-lg-Flo" firstAttribute="trailing" secondItem="Vc6-sW-XFB" secondAttribute="trailing" id="Zeq-RF-Qbk"/>
+                        <constraint firstItem="zrz-zo-Ctk" firstAttribute="centerX" secondItem="nBh-ZO-8td" secondAttribute="centerX" id="eut-Ku-Syb"/>
+                        <constraint firstItem="zrz-zo-Ctk" firstAttribute="leading" secondItem="Vc6-sW-XFB" secondAttribute="leading" id="jDM-er-C0a"/>
+                        <constraint firstItem="zrz-zo-Ctk" firstAttribute="top" secondItem="Vc6-sW-XFB" secondAttribute="bottom" constant="20" id="w0M-By-lRY"/>
+                        <constraint firstAttribute="height" constant="204" id="x3e-96-zkI"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="rW5-A1-XPg" firstAttribute="leading" secondItem="RlS-J6-mg7" secondAttribute="leading" id="FLW-o2-8hq"/>
+                <constraint firstItem="nBh-ZO-8td" firstAttribute="top" secondItem="rW5-A1-XPg" secondAttribute="bottom" id="I7e-tf-B1D"/>
+                <constraint firstAttribute="bottom" secondItem="nBh-ZO-8td" secondAttribute="bottom" id="NoI-wM-srg"/>
+                <constraint firstAttribute="trailing" secondItem="nBh-ZO-8td" secondAttribute="trailing" id="PtM-c8-K0T"/>
+                <constraint firstItem="rW5-A1-XPg" firstAttribute="top" secondItem="RlS-J6-mg7" secondAttribute="top" id="bh6-Dx-4xW"/>
+                <constraint firstAttribute="trailing" secondItem="rW5-A1-XPg" secondAttribute="trailing" id="gcR-PI-g1O"/>
+                <constraint firstItem="nBh-ZO-8td" firstAttribute="leading" secondItem="RlS-J6-mg7" secondAttribute="leading" id="jgk-hO-0rd"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="cancelBtn" destination="zrz-zo-Ctk" id="LbY-ve-sEy"/>
+                <outlet property="sureBtn" destination="Vc6-sW-XFB" id="7S1-Pb-9gg"/>
+                <outlet property="translateBottomConstrain" destination="NoI-wM-srg" id="1lJ-BN-pla"/>
+                <outlet property="translateView" destination="nBh-ZO-8td" id="9bZ-Qv-j62"/>
+            </connections>
+            <point key="canvasLocation" x="282.5" y="335.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="btnDefaultClick" width="99" height="86"/>
+        <image name="sureSelectedImage" width="42" height="19"/>
+    </resources>
+</document>

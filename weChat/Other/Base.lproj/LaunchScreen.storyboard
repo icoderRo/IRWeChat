@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
+                        <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person_topbackImage" translatesAutoresizingMaskIntoConstraints="NO" id="DQS-9c-oaQ">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QQ:616619792" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lEd-SC-l26">
+                                <rect key="frame" x="226.5" y="352" width="147" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="作者: 罗聪   " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4nM-oY-8HB">
+                                <rect key="frame" x="252.5" y="286.5" width="95.5" height="25.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="welCome LC.weChat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1sd-E6-IpH">
+                                <rect key="frame" x="191.5" y="220" width="217.5" height="26.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1sd-E6-IpH" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="200" id="0b3-2o-cnc"/>
+                            <constraint firstItem="4nM-oY-8HB" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="2bb-9L-Flc"/>
+                            <constraint firstItem="lEd-SC-l26" firstAttribute="top" secondItem="4nM-oY-8HB" secondAttribute="bottom" constant="40" id="5DQ-ad-Mi4"/>
+                            <constraint firstItem="lEd-SC-l26" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Bcz-zP-45n"/>
+                            <constraint firstAttribute="trailing" secondItem="DQS-9c-oaQ" secondAttribute="trailing" id="X8d-9R-LCX"/>
+                            <constraint firstItem="DQS-9c-oaQ" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="Y6i-S0-zAU"/>
+                            <constraint firstItem="4nM-oY-8HB" firstAttribute="top" secondItem="1sd-E6-IpH" secondAttribute="bottom" constant="40" id="dB8-Mn-HrN"/>
+                            <constraint firstItem="DQS-9c-oaQ" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="i7J-WH-Yc8"/>
+                            <constraint firstItem="1sd-E6-IpH" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="lfT-Rs-2pm"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="DQS-9c-oaQ" secondAttribute="bottom" id="zwG-Ba-1DY"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="person_topbackImage" width="375" height="270"/>
+    </resources>
+</document>
