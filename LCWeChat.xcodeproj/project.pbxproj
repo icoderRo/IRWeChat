@@ -18,6 +18,7 @@
 		C7453B411CE445E7007F0818 /* LCNewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7453B381CE445E7007F0818 /* LCNewsViewController.xib */; };
 		C7453B421CE445E7007F0818 /* LCPhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7453B3A1CE445E7007F0818 /* LCPhotosView.m */; };
 		C7453B541CE48A30007F0818 /* LCBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7453B531CE48A30007F0818 /* LCBaseViewController.m */; };
+		C75BE2BD1CF5A7F500BEA587 /* TTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C75BE2BC1CF5A7F500BEA587 /* TTTAttributedLabel.m */; };
 		C763CD871CE5C3860009F1C9 /* LCDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C763CD851CE5C3860009F1C9 /* LCDetailViewController.m */; };
 		C763CD881CE5C3860009F1C9 /* LCDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C763CD861CE5C3860009F1C9 /* LCDetailViewController.xib */; };
 		C76CE6A21CE17F1C00B25146 /* 24.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C76CE6A11CE17F1C00B25146 /* 24.jpg */; };
@@ -225,6 +226,8 @@
 		C7453B3A1CE445E7007F0818 /* LCPhotosView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCPhotosView.m; sourceTree = "<group>"; };
 		C7453B521CE48A30007F0818 /* LCBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCBaseViewController.h; sourceTree = "<group>"; };
 		C7453B531CE48A30007F0818 /* LCBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCBaseViewController.m; sourceTree = "<group>"; };
+		C75BE2BB1CF5A7F500BEA587 /* TTTAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTAttributedLabel.h; sourceTree = "<group>"; };
+		C75BE2BC1CF5A7F500BEA587 /* TTTAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTAttributedLabel.m; sourceTree = "<group>"; };
 		C763CD841CE5C3860009F1C9 /* LCDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCDetailViewController.h; sourceTree = "<group>"; };
 		C763CD851CE5C3860009F1C9 /* LCDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCDetailViewController.m; sourceTree = "<group>"; };
 		C763CD861CE5C3860009F1C9 /* LCDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LCDetailViewController.xib; sourceTree = "<group>"; };
@@ -587,6 +590,15 @@
 			path = "Discover(发现)";
 			sourceTree = "<group>";
 		};
+		C75BE2BA1CF5A7F500BEA587 /* TTTAttributedLabel */ = {
+			isa = PBXGroup;
+			children = (
+				C75BE2BB1CF5A7F500BEA587 /* TTTAttributedLabel.h */,
+				C75BE2BC1CF5A7F500BEA587 /* TTTAttributedLabel.m */,
+			);
+			path = TTTAttributedLabel;
+			sourceTree = "<group>";
+		};
 		C77F920C1CDC2BF700086E2B /* LCWeChat */ = {
 			isa = PBXGroup;
 			children = (
@@ -618,6 +630,7 @@
 		C77F92161CDC2BF700086E2B /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				C75BE2BA1CF5A7F500BEA587 /* TTTAttributedLabel */,
 				C77F92171CDC2BF700086E2B /* AFNetworking */,
 				C77F92251CDC2BF700086E2B /* DACircularProgress */,
 				C77F922A1CDC2BF700086E2B /* fmdb */,
@@ -1384,6 +1397,7 @@
 				C77F935C1CDC2BF700086E2B /* View+MASAdditions.m in Sources */,
 				C77F93961CDC2BF700086E2B /* LCPhotoBrowseView.m in Sources */,
 				C77F93501CDC2BF700086E2B /* FMResultSet.m in Sources */,
+				C75BE2BD1CF5A7F500BEA587 /* TTTAttributedLabel.m in Sources */,
 				C77F93791CDC2BF700086E2B /* UIView+WebCacheOperation.m in Sources */,
 				C77F937D1CDC2BF700086E2B /* NSData+LCCategory.m in Sources */,
 				C77F93581CDC2BF700086E2B /* MASViewAttribute.m in Sources */,

@@ -40,7 +40,7 @@
                             <constraint firstAttribute="height" constant="70" id="YBM-dy-6Mg"/>
                         </constraints>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VlW-K5-7Wv">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VlW-K5-7Wv" customClass="TTTAttributedLabel">
                         <rect key="frame" x="60" y="39.5" width="39.5" height="19.5"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="19.5" id="hla-ph-LQV"/>
@@ -95,7 +95,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="headerImageV" destination="B4T-7c-GaQ" id="SWc-4N-yaf"/>
-                <outlet property="messageLabel" destination="VlW-K5-7Wv" id="W9P-Id-cgn"/>
+                <outlet property="messageLabel" destination="VlW-K5-7Wv" id="ttV-Kq-IML"/>
                 <outlet property="messageLabelHeightConstraint" destination="hla-ph-LQV" id="Gb7-tt-lra"/>
                 <outlet property="moreTextButton" destination="AyG-f9-91y" id="uQc-zk-quW"/>
                 <outlet property="nickNameLabel" destination="1tx-76-QYE" id="f2o-al-JXU"/>

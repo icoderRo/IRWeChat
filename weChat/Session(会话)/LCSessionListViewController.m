@@ -35,21 +35,21 @@ static NSString * const internalSessionListCellId = @"internalSessionListCellId"
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    LCSessionList *list1 = [LCSessionList internalSessionListWithHeadrImage:@"aio_voiceChange_effect_0" name:@"lawCong" detailSession:@"你知道常用语在哪里快速查找吗" unreadCount:@"99" time:@"15:35"];
+    LCSessionList *list1 = [LCSessionList internalSessionListWithHeadrImage:@"aio_voiceChange_effect_0" name:@"罗聪" detailSession:@"源码于 https://github.com/icoderRo/LCWeChat" unreadCount:@"99" time:@"15:35"];
     [self.sessionList addObject:list1];
-    LCSessionList *list2 = [LCSessionList internalSessionListWithHeadrImage:@"aio_voiceChange_effect_1" name:@"lawCong" detailSession:@"你知道常用语在哪里快速查找吗" unreadCount:@"99" time:@"15:35"];
+    LCSessionList *list2 = [LCSessionList internalSessionListWithHeadrImage:@"aio_voiceChange_effect_1" name:@"罗聪" detailSession:@"源码于 https://github.com/icoderRo/LCWeChat" unreadCount:@"99" time:@"15:35"];
     [self.sessionList addObject:list2];
-    LCSessionList *list3 = [LCSessionList internalSessionListWithHeadrImage:@"aio_voiceChange_effect_2" name:@"lawCong" detailSession:@"你知道常用语在哪里快速查找吗" unreadCount:nil time:@"15:35"];
+    LCSessionList *list3 = [LCSessionList internalSessionListWithHeadrImage:@"aio_voiceChange_effect_2" name:@"罗聪" detailSession:@"源码于 https://github.com/icoderRo/LCWeChat" unreadCount:nil time:@"15:35"];
     [self.sessionList addObject:list3];
-    LCSessionList *list4 = [LCSessionList internalSessionListWithHeadrImage:@"aio_voiceChange_effect_3" name:@"lawCong" detailSession:nil  unreadCount:@"99" time:@"15:35"];
+    LCSessionList *list4 = [LCSessionList internalSessionListWithHeadrImage:@"aio_voiceChange_effect_3" name:@"罗聪" detailSession:nil  unreadCount:@"99" time:@"15:35"];
     [self.sessionList addObject:list4];
-    LCSessionList *list5 = [LCSessionList internalSessionListWithHeadrImage:@"aio_voiceChange_effect_0" name:@"lawCong" detailSession:@"你知道常用语在哪里快速查找吗" unreadCount:@"99" time:@"15:35"];
+    LCSessionList *list5 = [LCSessionList internalSessionListWithHeadrImage:@"aio_voiceChange_effect_0" name:@"罗聪" detailSession:@"源码于 https://github.com/icoderRo/LCWeChat" unreadCount:@"99" time:@"15:35"];
     [self.sessionList addObject:list5];
-    LCSessionList *list6 = [LCSessionList internalSessionListWithHeadrImage:@"aio_voiceChange_effect_1" name:@"lawCong" detailSession:@"你知道常用语在哪里快速查找吗" unreadCount:@"99" time:@"15:35"];
+    LCSessionList *list6 = [LCSessionList internalSessionListWithHeadrImage:@"aio_voiceChange_effect_1" name:@"罗聪" detailSession:@"源码于 https://github.com/icoderRo/LCWeChat" unreadCount:@"99" time:@"15:35"];
     [self.sessionList addObject:list6];
-    LCSessionList *list7 = [LCSessionList internalSessionListWithHeadrImage:@"aio_voiceChange_effect_2" name:@"lawCong" detailSession:@"你知道常用语在哪里快速查找吗" unreadCount:nil time:@"15:35"];
+    LCSessionList *list7 = [LCSessionList internalSessionListWithHeadrImage:@"aio_voiceChange_effect_2" name:@"罗聪" detailSession:@"源码于 https://github.com/icoderRo/LCWeChat" unreadCount:nil time:@"15:35"];
     [self.sessionList addObject:list7];
-    LCSessionList *list8 = [LCSessionList internalSessionListWithHeadrImage:@"aio_voiceChange_effect_3" name:@"lawCong" detailSession:nil  unreadCount:@"99" time:@"15:35"];
+    LCSessionList *list8 = [LCSessionList internalSessionListWithHeadrImage:@"aio_voiceChange_effect_3" name:@"罗聪" detailSession:nil  unreadCount:@"99" time:@"15:35"];
     [self.sessionList addObject:list8];
     
     [self setupTableView];

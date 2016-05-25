@@ -136,12 +136,6 @@
         }
     }];
     
-    
-    [self.detailSession mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.equalTo(self.contentView).offset(-12);
-        make.left.equalTo(self.nameLabel);
-    }];
-    
     [self.timeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.contentView).offset(12);
         make.right.equalTo(self.contentView).offset(-12);
@@ -151,6 +145,12 @@
         make.bottom.equalTo(self.contentView).offset(-11);
         make.right.equalTo(self.timeLabel);
         make.width.height.equalTo(@(20));
+    }];
+    
+    [self.detailSession mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.equalTo(self.contentView).offset(-12);
+        make.left.equalTo(self.nameLabel);
+        make.right.equalTo(self.unreadCountBtn).offset(-15);
     }];
 }
 

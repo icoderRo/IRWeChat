@@ -192,11 +192,15 @@ static NSString *const LCMoreInputViewCellId = @"LCMoreInputViewCellId";
 // 拍摄
 - (void)didClickCameraViewInMoreInputCell:(LCMoreInputCell *)moreInputCell
 {
+#if TARGET_IPHONE_SIMULATOR//模拟器
+    [MBProgressHUD showError:@"请在真机运行"];
+#elif TARGET_OS_IPHONE//真机
     UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
     imagePickerController.delegate = self;
     imagePickerController.allowsEditing = YES;
     imagePickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
     [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:imagePickerController animated:YES completion:nil];
+#endif
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info

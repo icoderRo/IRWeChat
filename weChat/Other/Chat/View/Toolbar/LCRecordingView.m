@@ -127,7 +127,7 @@ static NSTimer *timer;
     UIView.AnimationRepeatAutoreverses = YES;
     self.bordImageView.transform = CGAffineTransformMakeRotation(self.angle * (M_PI / 180.0f));
     float second = [self.centerLabel.text floatValue];
-    if (second <= 10.0f) {
+    if (second <= 50.0f) {
         self.centerLabel.textColor = [UIColor redColor];
     }else{
         self.centerLabel.textColor = [UIColor yellowColor];

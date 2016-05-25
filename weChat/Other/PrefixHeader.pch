@@ -57,6 +57,6 @@
 
 #define LCWeakSelf __weak typeof(self) weakSelf = self;
 
-#define offsetMainRight 320
+#define offsetMainRight 280
 #define offsetDetailRight 90
 #endif /* PrefixHeader_pch */

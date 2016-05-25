@@ -87,7 +87,7 @@ static CGFloat maxTextLength = 50;
     if (!_voiceButton) {
         UIButton *voiceButton = [[UIButton alloc] init];
         [voiceButton setAdjustsImageWhenHighlighted:NO];
-        [voiceButton setImage:[UIImage imageNamed:@"aio_voiceChange_effect"] forState:UIControlStateNormal];
+        [voiceButton setImage:[UIImage imageNamed:@"ToolViewInputVoice_ios7"] forState:UIControlStateNormal];
         [voiceButton setImage:[UIImage imageNamed:@"qvip_ps_banner_icon"] forState:UIControlStateSelected];
         [voiceButton addTarget:self action:@selector(clickVoiceButton:) forControlEvents:UIControlEventTouchDown];
         _voiceButton = voiceButton;

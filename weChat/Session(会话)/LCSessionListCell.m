@@ -8,12 +8,12 @@
 
 #import "LCSessionListCell.h"
 #import "LCSessionList.h"
-
-@interface LCSessionListCell ()
+#import "TTTAttributedLabel.h"
+@interface LCSessionListCell ()<TTTAttributedLabelDelegate>
 
 @property (weak, nonatomic) UIImageView *headerImageView;
 @property (weak, nonatomic) UILabel *nameLabel;
-@property (weak, nonatomic) UILabel *detailSession;
+@property (weak, nonatomic) TTTAttributedLabel *detailSession;
 @property (weak, nonatomic) UIButton *unreadCountBtn;
 @property (weak, nonatomic) UILabel *timeLabel;
 
@@ -54,12 +54,14 @@
     return _nameLabel;
 }
 
-- (UILabel *)detailSession
+- (TTTAttributedLabel *)detailSession
 {
     if (!_detailSession) {
-        UILabel *detailL = [[UILabel alloc] init];
-        detailL.font = [UIFont systemFontOfSize:12];
+        TTTAttributedLabel *detailL = [[TTTAttributedLabel alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+        detailL.font = [UIFont systemFontOfSize:10];
         detailL.textColor = LCColor(150, 150, 150);
+        detailL.delegate = self;
+        detailL.enabledTextCheckingTypes = NSTextCheckingTypeLink;
         [self.contentView addSubview:detailL];
         _detailSession = detailL;
     }
@@ -147,12 +149,6 @@
             make.top.equalTo(self.contentView).offset(12);
         }
     }];
-
-    
-    [self.detailSession mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.equalTo(self.contentView).offset(-12);
-        make.left.equalTo(self.nameLabel);
-    }];
     
     [self.timeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.contentView).offset(12);
@@ -163,6 +159,12 @@
         make.bottom.equalTo(self.contentView).offset(-11);
         make.right.equalTo(self.timeLabel);
         make.width.height.equalTo(@(20));
+    }];
+    
+    [self.detailSession mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.equalTo(self.contentView).offset(-12);
+        make.left.equalTo(self.nameLabel);
+        make.right.equalTo(self.unreadCountBtn).offset(-15);
     }];
 }
 

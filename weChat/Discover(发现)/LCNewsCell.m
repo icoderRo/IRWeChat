@@ -10,10 +10,11 @@
 #import "LCNews.h"
 #import "LCPhotosView.h"
 #define LCNewsCellMargin 10
-@interface LCNewsCell ()
+#import "TTTAttributedLabel.h"
+@interface LCNewsCell ()<TTTAttributedLabelDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *headerImageV;
 @property (weak, nonatomic) IBOutlet UILabel *nickNameLabel;
-@property (weak, nonatomic) IBOutlet UILabel *messageLabel;
+@property (weak, nonatomic) IBOutlet TTTAttributedLabel *messageLabel;
 @property (weak, nonatomic) IBOutlet LCPhotosView *photosViews;
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 @property (weak, nonatomic) IBOutlet UIButton *moreTextButton;
@@ -34,6 +35,9 @@
     } else if(iPhone6SP) {
         self.messageLabel.preferredMaxLayoutWidth = 330;
     }
+    
+    self.messageLabel.delegate = self;
+    self.messageLabel.enabledTextCheckingTypes = NSTextCheckingTypeLink;
 }
 
 - (void)setNews:(LCNews *)news
@@ -74,4 +78,5 @@
         [self.delegate newsCell:self didClickMoreTextButtonWithIndexPath:self.indexPath];
     }
 }
+
 @end
