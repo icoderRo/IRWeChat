@@ -73,7 +73,7 @@ static NSString * const bannerCellId = @"bannerCellId";
     
     [super viewDidLoad];
     
-    self.navigationItem.title = @"群名称：iOS 即时通讯交流 群 号：475814382";
+    self.navigationItem.title = @"群 号：475814382";
     self.view.backgroundColor = colorf0fGrey;
     self.navigationController.navigationBar.backgroundColor = [UIColor  yellowColor];
     [self setupTableView];
