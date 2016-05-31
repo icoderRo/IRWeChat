@@ -70,4 +70,23 @@
     [self bringSubviewToFront:self.plusButton];
 }
 
+
+- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
+    
+    if (self.isHidden == NO) { // 当前界面 tabBar显示
+        
+        CGPoint newPoint = [self convertPoint:point toView:self.plusButton];
+        
+        if ( [self.plusButton pointInside:newPoint withEvent:event]) { // 点 属于按钮范围
+            return self.plusButton;
+            
+        }else{
+            return [super hitTest:point withEvent:event];
+        }
+    }
+    else {
+        return [super hitTest:point withEvent:event];
+    }
+}
+
 @end
