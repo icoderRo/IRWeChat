@@ -18,6 +18,12 @@
 		C7453B411CE445E7007F0818 /* LCNewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7453B381CE445E7007F0818 /* LCNewsViewController.xib */; };
 		C7453B421CE445E7007F0818 /* LCPhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7453B3A1CE445E7007F0818 /* LCPhotosView.m */; };
 		C7453B541CE48A30007F0818 /* LCBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7453B531CE48A30007F0818 /* LCBaseViewController.m */; };
+		C753C1241D08000C001DFDD3 /* LCBaseSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = C753C11E1D08000C001DFDD3 /* LCBaseSocket.m */; };
+		C753C1251D08000C001DFDD3 /* LCSocketDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = C753C1211D08000C001DFDD3 /* LCSocketDecoder.m */; };
+		C753C1261D08000C001DFDD3 /* LCSocketEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = C753C1231D08000C001DFDD3 /* LCSocketEncoder.m */; };
+		C753C12D1D080033001DFDD3 /* Documentation.html in Resources */ = {isa = PBXBuildFile; fileRef = C753C1281D080033001DFDD3 /* Documentation.html */; };
+		C753C12E1D080033001DFDD3 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = C753C12A1D080033001DFDD3 /* GCDAsyncSocket.m */; };
+		C753C12F1D080033001DFDD3 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = C753C12C1D080033001DFDD3 /* GCDAsyncUdpSocket.m */; };
 		C75BE2BD1CF5A7F500BEA587 /* TTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C75BE2BC1CF5A7F500BEA587 /* TTTAttributedLabel.m */; };
 		C763CD871CE5C3860009F1C9 /* LCDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C763CD851CE5C3860009F1C9 /* LCDetailViewController.m */; };
 		C763CD881CE5C3860009F1C9 /* LCDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C763CD861CE5C3860009F1C9 /* LCDetailViewController.xib */; };
@@ -226,6 +232,18 @@
 		C7453B3A1CE445E7007F0818 /* LCPhotosView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCPhotosView.m; sourceTree = "<group>"; };
 		C7453B521CE48A30007F0818 /* LCBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCBaseViewController.h; sourceTree = "<group>"; };
 		C7453B531CE48A30007F0818 /* LCBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCBaseViewController.m; sourceTree = "<group>"; };
+		C753C11D1D08000C001DFDD3 /* LCBaseSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCBaseSocket.h; sourceTree = "<group>"; };
+		C753C11E1D08000C001DFDD3 /* LCBaseSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCBaseSocket.m; sourceTree = "<group>"; };
+		C753C11F1D08000C001DFDD3 /* LCSocketCoderProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCSocketCoderProtocol.h; sourceTree = "<group>"; };
+		C753C1201D08000C001DFDD3 /* LCSocketDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCSocketDecoder.h; sourceTree = "<group>"; };
+		C753C1211D08000C001DFDD3 /* LCSocketDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCSocketDecoder.m; sourceTree = "<group>"; };
+		C753C1221D08000C001DFDD3 /* LCSocketEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCSocketEncoder.h; sourceTree = "<group>"; };
+		C753C1231D08000C001DFDD3 /* LCSocketEncoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCSocketEncoder.m; sourceTree = "<group>"; };
+		C753C1281D080033001DFDD3 /* Documentation.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Documentation.html; sourceTree = "<group>"; };
+		C753C1291D080033001DFDD3 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
+		C753C12A1D080033001DFDD3 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		C753C12B1D080033001DFDD3 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
+		C753C12C1D080033001DFDD3 /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
 		C75BE2BB1CF5A7F500BEA587 /* TTTAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTAttributedLabel.h; sourceTree = "<group>"; };
 		C75BE2BC1CF5A7F500BEA587 /* TTTAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTAttributedLabel.m; sourceTree = "<group>"; };
 		C763CD841CE5C3860009F1C9 /* LCDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCDetailViewController.h; sourceTree = "<group>"; };
@@ -590,6 +608,32 @@
 			path = "Discover(发现)";
 			sourceTree = "<group>";
 		};
+		C753C11C1D08000C001DFDD3 /* socket */ = {
+			isa = PBXGroup;
+			children = (
+				C753C11D1D08000C001DFDD3 /* LCBaseSocket.h */,
+				C753C11E1D08000C001DFDD3 /* LCBaseSocket.m */,
+				C753C11F1D08000C001DFDD3 /* LCSocketCoderProtocol.h */,
+				C753C1201D08000C001DFDD3 /* LCSocketDecoder.h */,
+				C753C1211D08000C001DFDD3 /* LCSocketDecoder.m */,
+				C753C1221D08000C001DFDD3 /* LCSocketEncoder.h */,
+				C753C1231D08000C001DFDD3 /* LCSocketEncoder.m */,
+			);
+			path = socket;
+			sourceTree = "<group>";
+		};
+		C753C1271D080033001DFDD3 /* GCD */ = {
+			isa = PBXGroup;
+			children = (
+				C753C1281D080033001DFDD3 /* Documentation.html */,
+				C753C1291D080033001DFDD3 /* GCDAsyncSocket.h */,
+				C753C12A1D080033001DFDD3 /* GCDAsyncSocket.m */,
+				C753C12B1D080033001DFDD3 /* GCDAsyncUdpSocket.h */,
+				C753C12C1D080033001DFDD3 /* GCDAsyncUdpSocket.m */,
+			);
+			path = GCD;
+			sourceTree = "<group>";
+		};
 		C75BE2BA1CF5A7F500BEA587 /* TTTAttributedLabel */ = {
 			isa = PBXGroup;
 			children = (
@@ -630,6 +674,7 @@
 		C77F92161CDC2BF700086E2B /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				C753C1271D080033001DFDD3 /* GCD */,
 				C75BE2BA1CF5A7F500BEA587 /* TTTAttributedLabel */,
 				C77F92171CDC2BF700086E2B /* AFNetworking */,
 				C77F92251CDC2BF700086E2B /* DACircularProgress */,
@@ -996,6 +1041,7 @@
 				C77F93001CDC2BF700086E2B /* LCHttpParamTool.m */,
 				C77F93011CDC2BF700086E2B /* LCHttpTool.h */,
 				C77F93021CDC2BF700086E2B /* LCHttpTool.m */,
+				C753C11C1D08000C001DFDD3 /* socket */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -1302,6 +1348,7 @@
 				C77F93C71CDC2BF700086E2B /* LCLoginStatusView.xib in Resources */,
 				C7CD15FC1CDC88850082E9BB /* 12.jpg in Resources */,
 				C77F93A51CDC2BF700086E2B /* moreInputView.plist in Resources */,
+				C753C12D1D080033001DFDD3 /* Documentation.html in Resources */,
 				C7CD160F1CDC88850082E9BB /* 9.jpg in Resources */,
 				C7CD16111CDCA0F50082E9BB /* news.plist in Resources */,
 				C7CD16001CDC88850082E9BB /* 16.jpg in Resources */,
@@ -1373,6 +1420,7 @@
 				C77F93991CDC2BF700086E2B /* LCEmotionView.m in Sources */,
 				C77F93611CDC2BF700086E2B /* MJFoundation.m in Sources */,
 				C77F93671CDC2BF700086E2B /* NSObject+MJKeyValue.m in Sources */,
+				C753C12F1D080033001DFDD3 /* GCDAsyncUdpSocket.m in Sources */,
 				C77F939F1CDC2BF700086E2B /* LCNavigationController.m in Sources */,
 				C77F939B1CDC2BF700086E2B /* LCMoreInputCell.m in Sources */,
 				C77F93741CDC2BF700086E2B /* UIImage+GIF.m in Sources */,
@@ -1424,6 +1472,7 @@
 				C7453B3B1CE445E7007F0818 /* LCDiscoverViewController.m in Sources */,
 				C77F93901CDC2BF700086E2B /* LCSenderChatCell.m in Sources */,
 				C77F93AB1CDC2BF700086E2B /* LCAudioPlayTool.m in Sources */,
+				C753C1251D08000C001DFDD3 /* LCSocketDecoder.m in Sources */,
 				C77F939C1CDC2BF700086E2B /* LCMoreInputView.m in Sources */,
 				C77F93C01CDC2BF700086E2B /* LCLoginoffView.m in Sources */,
 				C77F93711CDC2BF700086E2B /* SDWebImageManager.m in Sources */,
@@ -1469,7 +1518,9 @@
 				C77F93471CDC2BF700086E2B /* AFURLRequestSerialization.m in Sources */,
 				C77F93981CDC2BF700086E2B /* LCEmotionPopView.m in Sources */,
 				C77F93BD1CDC2BF700086E2B /* LCSettingLoginItem.m in Sources */,
+				C753C12E1D080033001DFDD3 /* GCDAsyncSocket.m in Sources */,
 				C77F936F1CDC2BF700086E2B /* SDWebImageDownloader.m in Sources */,
+				C753C1241D08000C001DFDD3 /* LCBaseSocket.m in Sources */,
 				C77F934E1CDC2BF700086E2B /* FMDatabasePool.m in Sources */,
 				C77F939D1CDC2BF700086E2B /* LCRecordingView.m in Sources */,
 				C77F93AD1CDC2BF700086E2B /* LCCachesTool.m in Sources */,
@@ -1480,6 +1531,7 @@
 				C77F93C61CDC2BF700086E2B /* LCLoginStatusView.m in Sources */,
 				C77F93871CDC2BF700086E2B /* LCAnnotation.m in Sources */,
 				C77F93811CDC2BF700086E2B /* UIView+LCCategory.m in Sources */,
+				C753C1261D08000C001DFDD3 /* LCSocketEncoder.m in Sources */,
 				C77F93441CDC2BF700086E2B /* AFHTTPSessionManager.m in Sources */,
 				C77F93621CDC2BF700086E2B /* MJProperty.m in Sources */,
 				C77F935B1CDC2BF700086E2B /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
