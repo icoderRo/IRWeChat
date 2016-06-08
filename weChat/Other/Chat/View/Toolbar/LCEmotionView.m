@@ -131,6 +131,7 @@ static NSString *const LCEmotionCellId = @"LCEmotionCellId";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     LCEmotionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:LCEmotionCellId forIndexPath:indexPath];
+    
     self.lastItem = indexPath.item;
     cell.emotions = self.emotionArray[indexPath.item];
     

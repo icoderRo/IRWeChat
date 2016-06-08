@@ -14,6 +14,12 @@
 @implementation LCMoreInputCell
 - (void)setMoreInputViews:(NSArray *)moreInputViews
 {
+    if (self.contentView.subviews.count > 0) {
+        for (UIButton *btn in self.contentView.subviews) {
+            [btn removeFromSuperview];
+        }
+    }
+    
     _moreInputViews = moreInputViews;
     
     CGFloat width = 55;

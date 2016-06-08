@@ -29,6 +29,12 @@
 
 - (void)setEmotions:(NSArray *)emotions
 {
+    if (self.contentView.subviews.count > 0) {
+        for (UIButton *btn in self.contentView.subviews) {
+            [btn removeFromSuperview];
+        }
+    }
+    
     _emotions = emotions;
     
     CGFloat width = 30;
@@ -77,6 +83,8 @@
     });
     
     [[NSNotificationCenter defaultCenter] postNotificationName:@"userClickEmotion" object:nil userInfo:dict];
+    
+    
 }
 
 - (void)clickDeleteButton:(UIButton *)button

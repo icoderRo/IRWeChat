@@ -15,6 +15,7 @@ typedef NS_ENUM(NSInteger, subTitleStatues) {
 };
 
 @interface LCRecordingView : UIView
+// 根据 状态更改 显示的内容
 + (void)subTitleLabelStatues:(subTitleStatues)statues;
 + (void)show;
 + (void)dismiss;
