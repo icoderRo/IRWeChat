@@ -84,37 +84,5 @@
 			<string>aio_icons_video</string>
 		</dict>
 	</array>
-	<array>
-		<dict>
-			<key>name</key>
-			<string>推荐好友</string>
-			<key>png</key>
-			<string>aio_icons_share_nameplate</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>抖一抖</string>
-			<key>png</key>
-			<string>aio_icons_shake</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>短视频</string>
-			<key>png</key>
-			<string>aio_icons_shotmovie</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>转账</string>
-			<key>png</key>
-			<string>aio_icons_transfer</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>视频电话</string>
-			<key>png</key>
-			<string>aio_icons_video</string>
-		</dict>
-	</array>
 </array>
 </plist>

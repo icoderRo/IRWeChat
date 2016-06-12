@@ -215,68 +215,8 @@
 			<key>png</key>
 			<string>1f35</string>
 		</dict>
-		<dict>
-			<key>chs</key>
-			<string>[1f36]</string>
-			<key>png</key>
-			<string>1f36</string>
-		</dict>
 	</array>
 	<array>
-		<dict>
-			<key>chs</key>
-			<string>[1f27]</string>
-			<key>png</key>
-			<string>1f27</string>
-		</dict>
-		<dict>
-			<key>chs</key>
-			<string>[1f28]</string>
-			<key>png</key>
-			<string>1f28</string>
-		</dict>
-		<dict>
-			<key>chs</key>
-			<string>[1f29]</string>
-			<key>png</key>
-			<string>1f29</string>
-		</dict>
-		<dict>
-			<key>chs</key>
-			<string>[1f30]</string>
-			<key>png</key>
-			<string>1f30</string>
-		</dict>
-		<dict>
-			<key>chs</key>
-			<string>[1f31]</string>
-			<key>png</key>
-			<string>1f31</string>
-		</dict>
-		<dict>
-			<key>chs</key>
-			<string>[1f32]</string>
-			<key>png</key>
-			<string>1f32</string>
-		</dict>
-		<dict>
-			<key>chs</key>
-			<string>[1f33]</string>
-			<key>png</key>
-			<string>1f33</string>
-		</dict>
-		<dict>
-			<key>chs</key>
-			<string>[1f34]</string>
-			<key>png</key>
-			<string>1f34</string>
-		</dict>
-		<dict>
-			<key>chs</key>
-			<string>[1f35]</string>
-			<key>png</key>
-			<string>1f35</string>
-		</dict>
 		<dict>
 			<key>chs</key>
 			<string>[1f36]</string>
