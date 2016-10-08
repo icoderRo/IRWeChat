@@ -1,8 +1,8 @@
 # LCWeChat
 
 <p align="center">
-![enter image description here] ![enter image description here]
-(https://img.shields.io/badge/platform-iOS%207.0%2B-ff69b5618733984.svg) 
+![enter image description here]
+(https://img.shields.io/badge/platform-iOS%208.0%2B-ff69b5618733984.svg) 
 </a>
 
 ## 有需要的小伙伴,可以参考思路
