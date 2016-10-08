@@ -1,6 +1,6 @@
 # LCWeChat
 
-<p align="center">
+<p align="left">
 ![enter image description here]
 (https://img.shields.io/badge/platform-iOS%208.0%2B-ff69b5618733984.svg) 
 </a>
