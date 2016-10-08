@@ -29,7 +29,7 @@
 │   ├── Group # 讨论组列表
 |   ├── Plus # 更多
 |   ├── setting # 设置界面
-│   └── Other # 核心库
+│   └── Other # 大杂烩
 │       ├── Controller
 │       ├── view
 |       ├── category
@@ -37,10 +37,14 @@
 │       │   ├── audio
 │       │   ├── socket
 │       ├── Resources  # 资源文件，如图片、音频等
-│       └── chat # 核心布局库
+│       └── chat # 核心库
 |            ├── Controller
 |            ├── Model
-|            ├── View
+|            └── View
+|                ├── Photo # 图片浏览,选择
+|                ├── Toolbar # 工具条
+└──              └── chatCell # 核心布局库
+
 ```
 
  从上面可以看出，`ChatKit-OC` 项目包分为两个部分：
