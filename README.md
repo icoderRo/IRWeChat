@@ -64,7 +64,7 @@
 3.编码完成后的输出协议:LCSocketEncoderOutputProtocol
 4.解码完成后的输出协议:LCSocketDecoderOutputProtocol
 
-编码器 - LCSocketEncoder
+解码器 - LCSocketEncoder
 1. 遵守编码协议
 2.实现协议中的方法:
 - (void)encode:(id)object output (id<LCSocketEncoderOutputProtocol>)output
