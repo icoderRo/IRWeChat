@@ -2,7 +2,9 @@
 
 <p align="left">
 ![enter image description here]
-(https://img.shields.io/badge/platform-iOS%208.0%2B-ff69b5618733984.svg) 
+(https://img.shields.io/badge/platform-iOS%208.0%2B-ff69b5618733984.svg) ![enter image description here]
+(https://img.shields.io/badge/iOS-chat-brightgreen.svg) 
+
 </a>
 
 在使用中有任何问题都可以提 issue, 欢迎加入QQ群:475814382
