@@ -18,7 +18,7 @@
 * 高仿最新QQ侧滑效果
 * 高仿朋友圈,文本收缩, 下拉刷新
 
-### demo演示
+### 项目gif演示
 ![image](https://github.com/icoderRo/LCWeChat/blob/master/Resource/LCWeChat.gif)
 
 ### 项目结构
@@ -46,8 +46,6 @@
 └──              └── chatCell # 核心布局库
 
 ```
-
- 从上面可以看出，`ChatKit-OC` 项目包分为两个部分：
  
 ### 部分代码结构
 ![image](https://github.com/icoderRo/LCWeChat/blob/master/Resource/chatCell.png)
