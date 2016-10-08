@@ -47,8 +47,51 @@
         }
     }];
 ```
-### 可参考部分
+
 ```
+例如使用录音指示器
+老规矩 拖相关文件
+
+1.设置录音按钮的状态
+[recordButton addTarget:self action:@selector(startRecord:) forControlEvents:UIControlEventTouchDown];
+[recordButton addTarget:self action:@selector(endRecord:) forControlEvents:UIControlEventTouchUpInside];
+[recordButton addTarget:self action:@selector(dragExitRecord:) forControlEvents:UIControlEventTouchDragExit];
+[recordButton addTarget:self action:@selector(cancelRecord:) forControlEvents:UIControlEventTouchUpOutside];
+[recordButton addTarget:self action:@selector(dragEnterRecord:) forControlEvents:UIControlEventTouchDragEnter];
+
+2. 监听
+// 1.开始录音
+- (void)startRecord:(UIButton *)recordButton 
+{
+    [LCRecordingView show];
+    [LCRecordingView subTitleLabelStatues:subTitleStatuesDefault];
+}
+// 2.结束录音
+- (void)endRecord:(UIButton *)recordButton
+ {
+    [LCRecordingView dismiss];
+    [LCRecordingView subTitleLabelStatues:subTitleStatuesDefault];
+}
+// 3.取消录音
+- (void)cancelRecord:(UIButton *)recordButton
+{
+    [LCRecordingView dismiss];
+    [LCRecordingView subTitleLabelStatues:subTitleStatuesDefault];
+}
+
+//4. 离开按钮范围
+- (void)dragExitRecord:(UIButton *)recordButton
+{
+     [LCRecordingView subTitleLabelStatues:subTitleStatuesCancel];
+}
+
+//5. 移动回按钮范围
+- (void)dragEnterRecord:(UIButton *)recordButton
+{
+     [LCRecordingView subTitleLabelStatues:subTitleStatuesCancel];
+}
+```
+### 可参考部分
 如: 基于netty LengthFieldBasedFrameDecoder(100000000,0,4,0,4) 
 总长度 = 4byte + 包体内容
 接收二进制的json字符串
@@ -75,7 +118,7 @@
 2.实现协议中的方法:
 - (void)decode:(id)object output:(id<LCSocketDecoderOutputProtocol>)output
 其中, 输出output遵守 解码输出协议
-```
+
 ### 项目结构
 ```
 ├── weChat  
