@@ -1,7 +1,7 @@
 # LCWeChat
 
 <p align="center">
-![enter image description here](https://img.shields.io/badge/pod-v0.7.13-brightgreen.svg)  ![enter image description here]
+![enter image description here] ![enter image description here]
 (https://img.shields.io/badge/platform-iOS%207.0%2B-ff69b5618733984.svg) 
 </a>
 
