@@ -102,9 +102,7 @@
 
 ```
  
-### 部分代码结构
-![image](https://github.com/icoderRo/LCWeChat/blob/master/Resource/chatCell.png)
-
+### 布局的代码结构
 ![image](https://github.com/icoderRo/LCWeChat/blob/master/Resource/mainController.png)
 
 
