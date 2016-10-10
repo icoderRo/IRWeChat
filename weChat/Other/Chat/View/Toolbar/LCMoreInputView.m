@@ -136,7 +136,7 @@ static NSString *const LCMoreInputViewCellId = @"LCMoreInputViewCellId";
     LCAssetGridViewController *assetGridViewController = [[LCAssetGridViewController alloc] init];
     assetGridViewController.delegate = self;
     assetGridViewController.allPhotos = (NSMutableArray *)allPhotos;
-    LCNavigationController *nav = [[LCNavigationController alloc] initWithRootViewController:assetGridViewController];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:assetGridViewController];
     [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:nav animated:YES completion:nil];
 }
 
