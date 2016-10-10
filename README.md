@@ -31,8 +31,15 @@
 ![image](https://github.com/icoderRo/LCWeChat/blob/master/Resource/LCWeChat.gif)
 
 ### 部分工具用法
+
+* [LCMqtt](https://github.com/icoderRo/LCMqtt) - easy to use mqtt
+
 ```
-例如:对于audio的使用
+pod 'LCMqtt', '~> 1.0.0' 简单易用基于mqtt协议
+
+```
+```
+再比如:对于audio的使用
 
 首先将文件夹拖进去
 
@@ -97,32 +104,35 @@
 }
 ```
 ### 可参考部分
+```
 如: 基于netty LengthFieldBasedFrameDecoder(100000000,0,4,0,4) 
 总长度 = 4byte + 包体内容
 接收二进制的json字符串
 
-`设计:`
+设计:
 1.采用面向协议的方式编码与解码
 2.自定义编码器和解码器, 遵守协议, 实现协议中的方法
 3.基于GCDAsyncSocket, 封装需要用到的方法
 
-`协议 - LCSocketCoderProtocol`
+协议 - LCSocketCoderProtocol
 1.编码协议:LCSocketEncoderProtocol
 2.解码协议:LCSocketDecoderProtocol
 3.编码完成后的输出协议:LCSocketEncoderOutputProtocol
 4.解码完成后的输出协议:LCSocketDecoderOutputProtocol
 
-`解码器 - LCSocketEncoder`
+解码器 - LCSocketEncoder
 1. 遵守编码协议
 2.实现协议中的方法:
 - (void)encode:(id)object output (id<LCSocketEncoderOutputProtocol>)output
 其中, 输出output遵守 编码输出协议
 
-`编码器 - LCSocketDecoder`
+编码器 - LCSocketDecoder
 1. 遵守解码协议
 2.实现协议中的方法:
 - (void)decode:(id)object output:(id<LCSocketDecoderOutputProtocol>)output
 其中, 输出output遵守 解码输出协议
+
+```
 
 ### 项目结构
 ```
