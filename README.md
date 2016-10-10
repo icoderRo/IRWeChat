@@ -32,7 +32,7 @@
 
 ### 部分工具用法
 
-* [LCMqtt](https://github.com/icoderRo/LCMqtt) - easy to use mqtt
+* [LCMqtt](https://github.com/icoderRo/LCMqtt) - an easy to use mqtt deal
 
 ```
 pod 'LCMqtt', '~> 1.0.0' 简单易用基于mqtt协议
