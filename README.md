@@ -160,7 +160,7 @@ pod 'LCMqtt', '~> 1.0.0' 简单易用基于mqtt协议
 
 ```
  
-### 布局的代码结构
+### 布局代码结构
 ![image](https://github.com/icoderRo/LCWeChat/blob/master/Resource/mainController.png)
 
 
