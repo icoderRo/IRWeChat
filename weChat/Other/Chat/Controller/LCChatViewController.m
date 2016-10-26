@@ -18,6 +18,7 @@
 #import "LCHttpTool.h"
 #import "LCBanner.h"
 #import "LCMapViewController.h"
+#import "LCCachesTool.h"
 
 #define inputToolBarDefailtHeight 44
 
@@ -79,8 +80,65 @@ static NSString * const bannerCellId = @"bannerCellId";
     [self setupTableView];
     [self setupToolBar];
     
+    [self setupHistoryData];
+    
 }
 
+- (void)setupHistoryData
+{
+    NSDictionary *dict = @{
+                           @"maxIndex" : @(40),
+                           @"num" : @(40)
+                           };
+   NSArray *historyArray = [LCCachesTool selectSessionWithNumberParams:dict];
+    
+        [self insertSessions:historyArray];
+}
+
+- (void)insertSessions:(NSArray *)sessionArray
+{
+    NSMutableArray *array = [NSMutableArray array];
+    
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        NSInteger count = sessionArray.count - 1;
+        for (NSInteger i = count; i >= 0; i--) {
+            
+            LCSession *session = sessionArray[i];
+            
+            if (session.messageType == messageTypeText) {
+                session.text = [session.fullText emotionStringWithWH:23];
+            }
+            
+            
+            NSString *timeStr = [NSString stringWithFormat:@"%zd", session.messageTime];
+            
+            LCBanner *banner = [LCBanner bannerWithTimerString:[timeStr timeString]];
+            if (![self.currentTimeStr isEqualToString:banner.timerString]) {
+                [array addObject:banner];
+                self.currentTimeStr = banner.timerString;
+            }
+            
+            [array addObject:session];
+        }
+        
+        NSInteger aCount = array.count - 1;
+        for (NSInteger i = aCount; i >= 0; i--) {
+            
+            [self.dataSource insertObject:array[i] atIndex:0];
+        }
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            [self.tableView reloadData];
+            
+            if (self.dataSource.count == 0)return;
+            NSIndexPath *indexPath = [NSIndexPath indexPathForRow:self.dataSource.count -1 inSection:0];
+            [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionBottom animated:NO];
+
+        });
+        
+    });
+}
 
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -193,9 +251,17 @@ static NSString * const bannerCellId = @"bannerCellId";
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if ([self.dataSource[indexPath.row] isKindOfClass:[LCBanner class]]) return 18;
-    
-    self.baseChatCellTool.session = self.dataSource[indexPath.row];
-    return self.baseChatCellTool.cellHeight;  
+
+    LCSession *session = self.dataSource[indexPath.row];
+    if (!session.cellHeight) {
+        self.baseChatCellTool.session = session;
+        session.cellHeight = self.baseChatCellTool.cellHeight;
+        
+        dispatch_async(dispatch_get_global_queue(0, 0), ^{
+            [LCCachesTool addSession:session];
+        });
+    }
+    return session.cellHeight;
 }
 
 
@@ -211,6 +277,7 @@ static NSString * const bannerCellId = @"bannerCellId";
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         textSession.send = YES;
         textSession.fail = YES;
+        [LCCachesTool addSession:textSession];
          [self.tableView reloadData];
     });
     if (add) {

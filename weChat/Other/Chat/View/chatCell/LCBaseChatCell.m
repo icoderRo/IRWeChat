@@ -21,6 +21,39 @@
 
 @implementation LCBaseChatCell
 #pragma mark - lazy
+- (UIImageView *)backgroundMsgView
+{
+    if (!_backgroundMsgView) {
+        UIImageView *backgroundMsgView = [[UIImageView alloc] init];
+        _backgroundMsgView = backgroundMsgView;
+        [self.contentView addSubview:_backgroundMsgView];
+    }
+    
+    return _backgroundMsgView;
+}
+
+- (UIImageView *)backgroundImageView
+{
+    if (!_backgroundImageView) {
+        UIImageView *backgroundMsgView = [[UIImageView alloc] init];
+        _backgroundImageView = backgroundMsgView;
+        [self.contentView addSubview:_backgroundImageView];
+    }
+    
+    return _backgroundImageView;
+}
+
+- (UIImageView *)backgroundVoiceView
+{
+    if (!_backgroundVoiceView) {
+        UIImageView *backgroundMsgView = [[UIImageView alloc] init];
+        _backgroundVoiceView = backgroundMsgView;
+        [self.contentView addSubview:_backgroundVoiceView];
+    }
+    
+    return _backgroundVoiceView;
+}
+
 - (UILabel *)mapViewMaskLabel
 {
     if (!_mapViewMaskLabel) {
@@ -75,17 +108,6 @@
     }
     
     return _headerImageView;
-}
-
-- (UIImageView *)backgroundMsgView
-{
-    if (!_backgroundMsgView) {
-        UIImageView *backgroundMsgView = [[UIImageView alloc] init];
-        _backgroundMsgView = backgroundMsgView;
-        [self.contentView addSubview:_backgroundMsgView];
-    }
-    
-    return _backgroundMsgView;
 }
 
 - (UILabel *)voiceTimeLabel
@@ -220,7 +242,7 @@
     [self showActivityIndicatorViewAndFailImageView];
     
     if (session.messageType == messageTypeText) { // 文本
-        _msgLabel.attributedText = [session.fullText emotionStringWithWH:23];
+        _msgLabel.attributedText = session.text;
         
     } else if (session.messageType == messageTypeVoice){ // 语音
         _msgLabel.attributedText = [self showVoiceAttributedString];

@@ -1,9 +1,9 @@
 //
 //  LCTabBar.h
-//  weChat
+//  hotwind
 //
-//  Created by Lc on 16/5/3.
-//  Copyright © 2016年 LC. All rights reserved.
+//  Created by Lc on 15/7/3.
+//  Copyright © 2015年 LC. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

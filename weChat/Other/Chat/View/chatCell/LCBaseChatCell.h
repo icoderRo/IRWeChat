@@ -34,7 +34,12 @@
  */
 - (CGFloat)cellHeight;
 
-
+/**
+ *  消息背景
+ */
+@property (weak, nonatomic) UIImageView *backgroundMsgView;
+@property (weak, nonatomic) UIImageView *backgroundImageView;
+@property (weak, nonatomic) UIImageView *backgroundVoiceView;
 
 /* 在sender和receiver中公用的控件 */
 /**
@@ -42,10 +47,6 @@
  */
 @property (weak, nonatomic) UILabel *msgLabel;
 
-/**
- *  消息背景
- */
-@property (weak, nonatomic) UIImageView *backgroundMsgView;
 
 /**
  *  头像图标

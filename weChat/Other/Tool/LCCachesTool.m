@@ -73,7 +73,7 @@ static FMDatabaseQueue *_queue;
     
     [_queue inDatabase:^(FMDatabase *db) {
         sessionArray = [NSMutableArray array];
-        FMResultSet *rs = [db executeQuery:@"select * from sessionTable_%@ where messageIndex <= ? order by messageIndex desc limit 0,?;", param[@"maxIndex"], param[@"num"]];
+        FMResultSet *rs = [db executeQuery:@"select * from  t_session where messageIndex <= ? order by messageIndex desc limit 0,?;", param[@"maxIndex"], param[@"num"]];
         while (rs.next) {
             NSData *data = [rs dataForColumn:@"session"];
             LCSession *session = [NSKeyedUnarchiver unarchiveObjectWithData:data];

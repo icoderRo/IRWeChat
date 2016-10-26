@@ -193,6 +193,7 @@
 		C7CD160E1CDC88850082E9BB /* 8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C7CD15F61CDC88850082E9BB /* 8.jpg */; };
 		C7CD160F1CDC88850082E9BB /* 9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C7CD15F71CDC88850082E9BB /* 9.jpg */; };
 		C7CD16111CDCA0F50082E9BB /* news.plist in Resources */ = {isa = PBXBuildFile; fileRef = C7CD16101CDCA0F50082E9BB /* news.plist */; };
+		CB32F22D1DBF2FFC00F8B975 /* LCMetersRecordingView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB32F22C1DBF2FFC00F8B975 /* LCMetersRecordingView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -548,6 +549,8 @@
 		C7CD15F61CDC88850082E9BB /* 8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 8.jpg; sourceTree = "<group>"; };
 		C7CD15F71CDC88850082E9BB /* 9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 9.jpg; sourceTree = "<group>"; };
 		C7CD16101CDCA0F50082E9BB /* news.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = news.plist; sourceTree = "<group>"; };
+		CB32F22B1DBF2FFC00F8B975 /* LCMetersRecordingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCMetersRecordingView.h; sourceTree = "<group>"; };
+		CB32F22C1DBF2FFC00F8B975 /* LCMetersRecordingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCMetersRecordingView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1005,6 +1008,8 @@
 				C77F92DE1CDC2BF700086E2B /* LCMoreInputView.m */,
 				C77F92DF1CDC2BF700086E2B /* LCRecordingView.h */,
 				C77F92E01CDC2BF700086E2B /* LCRecordingView.m */,
+				CB32F22B1DBF2FFC00F8B975 /* LCMetersRecordingView.h */,
+				CB32F22C1DBF2FFC00F8B975 /* LCMetersRecordingView.m */,
 				C77F92E11CDC2BF700086E2B /* LCTextView.h */,
 				C77F92E21CDC2BF700086E2B /* LCTextView.m */,
 			);
@@ -1474,6 +1479,7 @@
 				C77F93AB1CDC2BF700086E2B /* LCAudioPlayTool.m in Sources */,
 				C753C1251D08000C001DFDD3 /* LCSocketDecoder.m in Sources */,
 				C77F939C1CDC2BF700086E2B /* LCMoreInputView.m in Sources */,
+				CB32F22D1DBF2FFC00F8B975 /* LCMetersRecordingView.m in Sources */,
 				C77F93C01CDC2BF700086E2B /* LCLoginoffView.m in Sources */,
 				C77F93711CDC2BF700086E2B /* SDWebImageManager.m in Sources */,
 				C77F936C1CDC2BF700086E2B /* SDImageCache.m in Sources */,
@@ -1622,8 +1628,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: ShuDe Li (8QB53TS5MJ)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: ShuDe Li (8QB53TS5MJ)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: 聪 罗 (94EUFX57HA)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos9.0]" = "iPhone Developer: ShuDe Li (8QB53TS5MJ)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1642,10 +1648,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
+				PROVISIONING_PROFILE = "7391d79a-3818-4d98-a645-c41ab87d4964";
+				SDKROOT = iphoneos9.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1668,6 +1675,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: 聪 罗 (94EUFX57HA)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1681,9 +1689,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
+				PROVISIONING_PROFILE = "7391d79a-3818-4d98-a645-c41ab87d4964";
+				SDKROOT = iphoneos9.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1708,6 +1717,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = LC.weChat;
 				PRODUCT_NAME = LCWeChat;
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1716,6 +1727,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/weChat/Other/PrefixHeader.pch";
 				INFOPLIST_FILE = weChat/Other/Info.plist;
@@ -1729,6 +1741,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = LC.weChat;
 				PRODUCT_NAME = LCWeChat;
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

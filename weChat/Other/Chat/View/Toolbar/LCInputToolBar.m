@@ -24,6 +24,7 @@
 @property (weak, nonatomic) UIButton *recordButton;
 @property (weak, nonatomic) LCMoreInputView *inputAddView;
 @property (weak, nonatomic) LCEmotionView *inputemotionView;
+@property (nonatomic, assign) NSInteger messageIndex;
 @property (assign, nonatomic, getter=isDurationToolong) BOOL durationToolong;
 
 @end
@@ -31,7 +32,7 @@
 static CGFloat textViewH = 0;
 static CGFloat mintextViewH = 26;
 static CGFloat maxtextViewH = 74;
-static CGFloat maxTextLength = 50;
+static CGFloat maxTextLength = 500;
 
 @implementation LCInputToolBar
 + (instancetype)inputToolBar
@@ -276,7 +277,7 @@ static CGFloat maxTextLength = 50;
         NSString *fullText = [self.textView.fullText substringToIndex:maxTextLength];
         self.textView.attributedText = [fullText emotionStringWithWH:24];
         self.textView.font = [UIFont systemFontOfSize:20];
-        [MBProgressHUD showError:@"超过50字符"];
+        [MBProgressHUD showError:@"超过500字符"];
         return;
     }
     
@@ -300,6 +301,9 @@ static CGFloat maxTextLength = 50;
             session.sessionId = self.sessionId;
             session.targetId = self.targetId;
             session.messageTime = [[NSDate dateWithTimeIntervalSinceNow:0] timeIntervalSince1970]*1000;
+            session.text = [session.fullText emotionStringWithWH:23];
+             session.messageIndex = self.messageIndex;
+            self.messageIndex += 1;
             [self.delegate inputToolBar:self didSendTextSession:session isNeedToAdd:YES];
         }
         self.textView.fullText = nil;
@@ -325,6 +329,9 @@ static CGFloat maxTextLength = 50;
         session.sessionId = self.sessionId;
         session.targetId = self.targetId;
         session.messageTime = [[NSDate dateWithTimeIntervalSinceNow:0] timeIntervalSince1970]*1000;
+        session.text = [session.fullText emotionStringWithWH:23];
+        session.messageIndex = session.messageIndex + 1;
+        LCLog(@"%zd", session.messageIndex);
         [weakSelf.delegate inputToolBar:weakSelf didSendTextSession:session isNeedToAdd:YES];
     }
     weakSelf.textView.fullText = nil;
@@ -455,7 +462,6 @@ static CGFloat maxTextLength = 50;
 // 插入表情
 - (void)didClickEmotion:(NSNotification *)note
 {
-    LCLog(@"测试通知执行了几次"); // 之前测试项目中,NSNotification执行了两次,改用了block ,这个demo中未发现
     if (self.textView.fullText.length + 6 > maxTextLength) {
         [MBProgressHUD showError:@"超过50字符"];
         return ;

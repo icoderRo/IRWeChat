@@ -61,6 +61,8 @@ typedef NS_ENUM(NSInteger, chatTargetType){
 // 目标客服ID
 @property (copy, nonatomic) NSString *targetId;
 
+@property (assign, nonatomic) CGFloat cellHeight;
+
 /**
  *  文本
  *

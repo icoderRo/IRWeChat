@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <AVFoundation/AVFoundation.h>
 
 @interface LCAudioRecord : NSObject
 
@@ -35,4 +36,8 @@
  *
  */
 - (BOOL)isRecording;
+
+
++ (AVAudioRecorder *)recorder;
+
 @end

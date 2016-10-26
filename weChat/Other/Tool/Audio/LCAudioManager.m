@@ -48,8 +48,19 @@ typedef NS_ENUM(NSInteger, audioSession){
     return audioManager;
 }
 
+- (instancetype)init
+{
+    if (self = [super init]) {
+        [self changeProximityMonitorEnableState:YES];
+        [[UIDevice currentDevice] setProximityMonitoringEnabled:NO];
+        
+    }
+    
+    return self;
+}
 
-- (BOOL)checkMicrophoneAvailability{
+- (BOOL)checkMicrophoneAvailability
+{
     __block BOOL open = NO;
     AVAudioSession *session = [AVAudioSession sharedInstance];
     if ([session respondsToSelector:@selector(requestRecordPermission:)]) {
@@ -61,6 +72,47 @@ typedef NS_ENUM(NSInteger, audioSession){
     }
     
     return open;
+}
+
+#pragma mark - ProximityMonitor
+- (void)changeProximityMonitorEnableState:(BOOL)enable
+{
+    [[UIDevice currentDevice] setProximityMonitoringEnabled:YES];
+    if ([UIDevice currentDevice].proximityMonitoringEnabled == YES) {
+        if (enable) {
+            
+            //添加近距离事件监听，添加前先设置为YES，如果设置完后还是NO的读话，说明当前设备没有近距离传感器
+            [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(sensorStateChange) name:UIDeviceProximityStateDidChangeNotification object:nil];
+            
+        } else {
+            //删除近距离事件监听
+            [[NSNotificationCenter defaultCenter] removeObserver:self name:UIDeviceProximityStateDidChangeNotification object:nil];
+            [[UIDevice currentDevice] setProximityMonitoringEnabled:NO];
+        }
+    }
+}
+
+- (void)sensorStateChange
+{
+    //如果此时手机靠近面部放在耳朵旁，那么声音将通过听筒输出，并将屏幕变暗
+    if ([[UIDevice currentDevice] proximityState] == YES) {
+        //黑屏
+        [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayAndRecord error:nil];
+        
+    } else {
+        //没黑屏幕
+        [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
+        if (![self isPlaying]) {
+            //没有播放了，也没有在黑屏状态下，就可以把距离传感器关了
+            [[UIDevice currentDevice] setProximityMonitoringEnabled:NO];
+        }
+    }
+}
+
+
+- (void)dealloc
+{
+    [self changeProximityMonitorEnableState:NO];
 }
 
 #pragma mark - LCAudioRecord
@@ -154,6 +206,7 @@ typedef NS_ENUM(NSInteger, audioSession){
         }
     }
     
+    [[UIDevice currentDevice] setProximityMonitoringEnabled:YES];
     [[LCAudioPlay sharedInstance] playingWithPath:[self MP3FilePath:recordPath] completion:^(NSError *error) {
         [self setCategory:audioSessionDefault isActive:NO];
         if (completion) completion(error);
@@ -163,6 +216,7 @@ typedef NS_ENUM(NSInteger, audioSession){
 - (void)stopPlaying
 {
     [[LCAudioPlay sharedInstance] stopPlaying];
+    [[UIDevice currentDevice] setProximityMonitoringEnabled:NO];
     [self setCategory:audioSessionDefault isActive:NO];
 }
 

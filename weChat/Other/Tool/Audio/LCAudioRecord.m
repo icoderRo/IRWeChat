@@ -112,4 +112,8 @@
     self.completion = nil;
 }
 
++(AVAudioRecorder *)recorder
+{
+    return [LCAudioRecord sharedInstance].recorder;
+}
 @end
