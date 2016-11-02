@@ -148,8 +148,8 @@
 - (void)calculateAllselectedItemsBytes
 {
     if (self.originalButton.isSelected) {
-        __block NSInteger dataLength = 0;
-        __block NSInteger lastSelectedItem = 0;
+        NSInteger dataLength = 0;
+        NSInteger lastSelectedItem = 0;
         
         for (LCAsset *asset in self.selectedItems) {
             lastSelectedItem++;
