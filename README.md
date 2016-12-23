@@ -38,7 +38,7 @@
 pod 'LCMqtt', '~> 1.0.0' 简单易用基于mqtt协议
 
 ```
-```
+```Objc
 再比如:对于audio的使用
 
 首先将文件夹拖进去
@@ -60,7 +60,7 @@ pod 'LCMqtt', '~> 1.0.0' 简单易用基于mqtt协议
     }];
 ```
 
-```
+```Objc
 例如使用录音指示器
 老规矩 拖相关文件
 
@@ -104,7 +104,7 @@ pod 'LCMqtt', '~> 1.0.0' 简单易用基于mqtt协议
 }
 ```
 ### 可参考部分
-```
+```Objc
 如: 基于netty LengthFieldBasedFrameDecoder(100000000,0,4,0,4) 
 总长度 = 4byte + 包体内容
 接收二进制的json字符串
@@ -162,5 +162,4 @@ pod 'LCMqtt', '~> 1.0.0' 简单易用基于mqtt协议
  
 ### 布局代码结构
 ![image](https://github.com/icoderRo/LCWeChat/blob/master/Resource/mainController.png)
-
 
