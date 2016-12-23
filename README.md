@@ -34,7 +34,7 @@
 
 * [LCMqtt](https://github.com/icoderRo/LCMqtt) - an easy to use mqtt deal
 
-```
+```Objc
 pod 'LCMqtt', '~> 1.0.0' 简单易用基于mqtt协议
 
 ```
